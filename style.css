@@ -1335,6 +1335,69 @@ footer {
 .footer-bottom a { color: var(--mu); text-decoration: none; }
 .footer-bottom a:hover { color: var(--gg); }
 
+/* ── ORDER WHATSAPP BOX ── */
+.order-whatsapp-box {
+  margin-top: .5rem;
+  border-top: 1px solid var(--cbr);
+  padding-top: 1.2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .8rem;
+}
+.owb-or {
+  color: var(--mu);
+  font-size: .78rem;
+  letter-spacing: 1px;
+}
+.owb-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .9rem;
+  background: #1a3d25;
+  border: 2px solid #25d366;
+  border-radius: 14px;
+  padding: .9rem 1.6rem;
+  text-decoration: none;
+  transition: all .25s;
+  width: 100%;
+  justify-content: center;
+}
+.owb-link:hover {
+  background: #25d366;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(37,211,102,.4);
+}
+.owb-link svg { color: #25d366; flex-shrink: 0; transition: color .25s; }
+.owb-link:hover svg { color: #fff; }
+.owb-link span {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: .1rem;
+}
+.owb-link strong {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.owb-link em {
+  color: #25d366;
+  font-style: normal;
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: .5px;
+  transition: color .25s;
+}
+.owb-link:hover em { color: #fff; }
+.owb-note {
+  color: var(--mu);
+  font-size: .78rem;
+  line-height: 1.55;
+}
+
 /* ── MOBILE TWEAKS ── */
 @media (max-width: 480px) {
   .hero-stats { gap: 1rem; }
@@ -1346,4 +1409,112 @@ footer {
   .follow-links { flex-direction: column; align-items: center; }
   .lb-prev, .lb-next { display: none; }
   .lb-container { max-height: 95vh; border-radius: 12px; }
+}
+
+/* ── SERVICE CARD CTA ROW ── */
+.svc-cta-row {
+  display: flex;
+  gap: .5rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+.svc-btn-wa,
+.svc-btn-tg,
+.svc-btn-gy {
+  display: inline-flex;
+  align-items: center;
+  gap: .3rem;
+  padding: .45rem .85rem;
+  border-radius: 50px;
+  font-size: .76rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all .22s;
+  white-space: nowrap;
+  flex: 1;
+  justify-content: center;
+}
+.svc-btn-wa {
+  background: rgba(37,211,102,.12);
+  border: 1px solid rgba(37,211,102,.35);
+  color: #25d366;
+}
+.svc-btn-wa:hover {
+  background: #25d366;
+  color: #fff;
+  transform: translateY(-1px);
+}
+.svc-btn-tg {
+  background: rgba(41,182,246,.1);
+  border: 1px solid rgba(41,182,246,.3);
+  color: #29b6f6;
+}
+.svc-btn-tg:hover {
+  background: #29b6f6;
+  color: #fff;
+  transform: translateY(-1px);
+}
+.svc-btn-gy {
+  background: var(--g);
+  border: 1px solid var(--gl);
+  color: #fff;
+}
+.svc-btn-gy:hover {
+  background: var(--gl);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(46,204,113,.3);
+}
+
+/* ── TELEGRAM & LINKEDIN FOLLOW BUTTONS ── */
+.telegram-btn:hover {
+  background: #29b6f6;
+  color: #fff;
+  border-color: transparent;
+}
+.linkedin-btn:hover {
+  background: #0077b5;
+  color: #fff;
+  border-color: transparent;
+}
+
+/* ── SP ICON AS LINK ── */
+.spi {
+  text-decoration: none;
+  transition: transform .2s;
+}
+a.spi:hover { transform: scale(1.15); }
+
+/* ── PORTFOLIO CARD CTA BUTTON ── */
+.port-wa-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .4rem;
+  margin-top: .8rem;
+  padding: .55rem 1rem;
+  background: rgba(37,211,102,.1);
+  border: 1px solid rgba(37,211,102,.3);
+  border-radius: 8px;
+  color: #25d366;
+  font-size: .8rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all .25s;
+}
+.port-wa-btn:hover {
+  background: #25d366;
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(37,211,102,.3);
+}
+
+/* ── PRICING: Starter uses outline style, others use primary ── */
+.price-card .btn-outline-block {
+  border: 2px solid var(--gg);
+  color: var(--gg);
+  font-weight: 700;
+}
+.price-card .btn-outline-block:hover {
+  background: var(--gg);
+  color: var(--dk);
 }
